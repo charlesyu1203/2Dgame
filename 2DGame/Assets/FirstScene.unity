@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 1132847077}
   - component: {fileID: 1132847081}
   - component: {fileID: 1132847080}
+  - component: {fileID: 1132847082}
   m_Layer: 0
   m_Name: PlayerKnight
   m_TagString: Untagged
@@ -550,3 +551,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.030574195, y: 0.25439513}
   m_EdgeRadius: 0
+--- !u!114 &1132847082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132847076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4d3b3f942c5984f81caff744dcf7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
