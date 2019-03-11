@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed;             //Floating point variable to store the player's movement speed.
 
+    private bool isDead = false;
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
     // Use this for initialization
@@ -29,5 +30,19 @@ public class PlayerController : MonoBehaviour
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         rb2d.AddForce(movement * speed);
+    }
+
+    void Update()
+    {
+        if(isDead == false)
+        {
+            rb2d.velocity = Vector2.zero;
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        isDead = true;
+        GameControl.instance.KnightDied();
     }
 }
