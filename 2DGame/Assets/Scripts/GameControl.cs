@@ -11,7 +11,7 @@ public class GameControl : MonoBehaviour
 
     private int score = 0;                      
     public bool gameOver = false;            
-    public float scrollSpeed = -2.5f;
+    public float scrollSpeed = -1.5f;
 
 
     void Awake()
@@ -32,6 +32,15 @@ public class GameControl : MonoBehaviour
         {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        {
+            Application.Quit();
+            Debug.Log("Exit Game.");
         }
     }
 
